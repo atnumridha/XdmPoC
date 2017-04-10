@@ -1,0 +1,55 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View3">
+      <property
+         name="activityId">TaskPage</property>
+      <property
+         name="page">/TaskPage.jsf</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>TaskPage&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">96.396484</property>
+      <property
+         name="x">246.5</property>
+   </View>
+   <View
+      id="View4">
+      <property
+         name="activityId">SchedulePage</property>
+      <property
+         name="page">/SchedulePage.jsf</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>SchedulePage&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">106.396484</property>
+      <property
+         name="x">403.03223</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase5"
+      from="View3"
+      to="View4">
+      <property
+         name="fromOutcome">goSchedule</property>
+      <property
+         name="sdm:polyPoints">R46,287.9675,92.5459,362.03223,102.5459,L46</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase6"
+      from="View4"
+      to="View3">
+      <property
+         name="fromOutcome">goTask</property>
+      <property
+         name="sdm:polyPoints">L54,361.56326,109.5459,287.5,99.5459,R54</property>
+   </ControlFlowCase>
+</SDM>

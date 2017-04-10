@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="11.1.2.64.36" id="DataBindings"
+             SeparateXMLFiles="false" Package="com.dmcsol.xdmpoc.view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adfm/dvt"
+             className="oracle.adfinternal.view.faces.dvt.model.binding.FacesBindingFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/TaskPage.jsf" usageId="com_dmcsol_xdmpoc_view_TaskPagePageDef"/>
+    <page path="/SchedulePage.jsf" usageId="com_dmcsol_xdmpoc_view_SchedulePagePageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="com_dmcsol_xdmpoc_view_TaskPagePageDef" path="com.dmcsol.xdmpoc.view.pageDefs.TaskPagePageDef"/>
+    <page id="com_dmcsol_xdmpoc_view_SchedulePagePageDef" path="com.dmcsol.xdmpoc.view.pageDefs.SchedulePagePageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="EditTaskServiceDataControl" Package="com.dmcsol.xdmpoc.model.am"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="EditTaskServiceLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="ScheduledTaskServiceDataControl" Package="com.dmcsol.xdmpoc.model.am"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="ScheduledTaskServiceLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

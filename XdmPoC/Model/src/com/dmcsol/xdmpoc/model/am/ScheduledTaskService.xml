@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ScheduledTaskService"
+  Version="11.1.2.64.36"
+  ClearCacheOnRollback="true">
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="com.dmcsol.xdmpoc.model.am.ScheduledTaskService_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewUsage
+    Name="PersonsVO1"
+    ViewObjectName="com.dmcsol.xdmpoc.model.view.PersonsVO"/>
+  <ViewUsage
+    Name="ScheduledTasksVO1"
+    ViewObjectName="com.dmcsol.xdmpoc.model.view.ScheduledTasksVO"/>
+  <ViewLinkUsage
+    Name="PersonsTasksLink1"
+    ViewLinkObjectName="com.dmcsol.xdmpoc.model.view.link.PersonsTasksLink"
+    SrcViewUsageName="com.dmcsol.xdmpoc.model.am.ScheduledTaskService.PersonsVO1"
+    DstViewUsageName="com.dmcsol.xdmpoc.model.am.ScheduledTaskService.ScheduledTasksVO1"
+    Reversed="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="com.dmcsol.xdmpoc.model.ModelBundle"/>
+  </ResourceBundle>
+</AppModule>

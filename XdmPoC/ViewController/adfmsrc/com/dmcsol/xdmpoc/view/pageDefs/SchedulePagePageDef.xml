@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="11.1.2.64.36" id="SchedulePagePageDef"
+                Package="com.dmcsol.xdmpoc.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="PersonsVO1" RangeSize="-1" DataControl="ScheduledTaskServiceDataControl" id="PersonsVO1Iterator"/>
+  </executables>
+  <bindings>
+    <gantt IterBinding="PersonsVO1Iterator" id="PersonsVO1" xmlns="http://xmlns.oracle.com/adfm/dvt">
+      <ganttDataMap>
+        <nodeDefinition DefName="com.dmcsol.xdmpoc.model.view.PersonsVO" type="Resources">
+          <AttrNames>
+            <Item Value="PersId" type="resourceId"/>
+          </AttrNames>
+          <Accessors>
+            <Item Value="ScheduledTasksVO" type="tasks"/>
+          </Accessors>
+        </nodeDefinition>
+        <nodeDefinition type="Tasks" DefName="com.dmcsol.xdmpoc.model.view.ScheduledTasksVO">
+          <AttrNames>
+            <Item Value="TaskId" type="taskId"/>
+            <Item Value="StartDate" type="startTime"/>
+            <Item Value="EndDate" type="endTime"/>
+          </AttrNames>
+        </nodeDefinition>
+        <nodeDefinition type="Dependents">
+          <AttrNames/>
+        </nodeDefinition>
+        <nodeDefinition type="SplitTasks">
+          <AttrNames/>
+        </nodeDefinition>
+        <nodeDefinition type="RecurringTasks">
+          <AttrNames/>
+        </nodeDefinition>
+        <nodeDefinition type="Subresources">
+          <AttrNames/>
+        </nodeDefinition>
+      </ganttDataMap>
+    </gantt>
+  </bindings>
+</pageDefinition>
